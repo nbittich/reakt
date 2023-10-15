@@ -1,10 +1,5 @@
 export function useState(value) {
-  return [
-    () => value,
-    (newValue) => {
-      value = newValue;
-    },
-  ];
+  return [() => value, (newValue) => (value = newValue)];
 }
 
 class ReaktFramework {
@@ -42,7 +37,7 @@ class ReaktFramework {
     this.appDiv.appendChild(elem);
   }
   destroyComponent(elem) {
-    this.components = this.components.filter((c) => c.elem === elem);
+    this.components = this.components.filter((c) => c.elem !== elem);
     this.appDiv.removeChild(elem);
   }
 }
