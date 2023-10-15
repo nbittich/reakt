@@ -1,4 +1,4 @@
-import { reakt } from "./reakt.js";
+import { Reakt } from "./reakt.js";
 
 export function CounterManualComponent(getCount, setCount) {
   const div = document.createElement("div");
@@ -10,10 +10,12 @@ export function CounterManualComponent(getCount, setCount) {
 `;
   const [buttonIncr, buttonDecr] = div.querySelectorAll("button");
   const p = div.querySelector("p");
-  reakt(() => (p.innerText = `Counter value: ${getCount()}`));
 
   buttonIncr.onclick = () => setCount(getCount() + 1);
   buttonDecr.onclick = () => setCount(getCount() - 1);
 
+  Reakt.registerComponent(div, getCount, [
+    () => (p.innerText = `Count: ${getCount()}`),
+  ]);
   return div;
 }
