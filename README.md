@@ -1,8 +1,8 @@
-serve it with e.g
-
 # Reakt
 A reaktive frontend framework written in 23 lines of code, 69 including
 the example and the readme file.
+
+serve it with e.g
 
 ### run with nginx (docker) and go to http://localhost:8080
 
