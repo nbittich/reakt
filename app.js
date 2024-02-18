@@ -9,4 +9,4 @@ const _component3 = CounterManualComponent(getCounter, setCounter);
 const _component4 = CounterManualComponent(getCounter, setCounter);
 const _component5 = CounterManualComponent(getCounter, setCounter);
 
-setTimeout(() => Reakt.destroyComponent(component), 15000);
+// setTimeout(() => Reakt.destroyComponent(component), 15000);
