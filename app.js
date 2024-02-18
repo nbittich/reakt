@@ -3,7 +3,7 @@ import { CounterManualComponent } from "./counter-manual.js";
 
 const [getCounter, setCounter] = useState(0);
 
-const  component = CounterManualComponent(getCounter, setCounter);
+const   component = CounterManualComponent(getCounter, setCounter);
 const _component2 = CounterManualComponent(getCounter, setCounter);
 const _component3 = CounterManualComponent(getCounter, setCounter);
 const _component4 = CounterManualComponent(getCounter, setCounter);
